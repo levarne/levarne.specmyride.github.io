@@ -1,0 +1,15 @@
+<ion-view>
+    <ion-nav-title>
+        {{PageTitle}}
+    </ion-nav-title>
+    <ion-content class="padding">
+        <div class="list card" ng-repeat="modelData in categroyModelData | filter:{make_niceName:makeIDModel}" ng-click="selectModel(modelData.make_niceName, modelData.nice_name)">
+            <div class="item item-divider">{{modelData.name}}</div>
+            <div class="item item-body">
+                <div>
+                    <b>Year/s in production:</b><br/> {{modelData.year}}
+                </div>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>

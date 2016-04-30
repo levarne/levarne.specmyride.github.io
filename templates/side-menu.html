@@ -1,0 +1,53 @@
+<ion-header-bar class="bar-positive">
+    <h1 class="title" style="color:#444;">SpecMyRide</h1>
+</ion-header-bar>
+<ion-content scroll="false">
+    <ion-list>
+        <ion-item ng-href="#/tab/categories">
+            Category Type
+        </ion-item>
+        <ion-item ng-click="aboutAlert()">
+            About
+        </ion-item>
+        <ion-item spec-dropdown ng-disabled class="dropDownList">
+            Theme
+            
+            <ion-item>
+                <div ng-click="changeTheme('themeRetro')" >
+                    Retro
+                </div>
+                <div ng-click="changeTheme('themeGti')">
+                    Gti
+                </div>
+                <div ng-click="changeTheme('themeElegant_night')">
+                    Elegant-Night
+                </div>
+                <div ng-click="changeTheme('themeElegant_bitch')">
+                    Elegant-bitch
+                </div>
+                <div ng-click="changeTheme('themeElegant_r8')">
+                    R8
+                </div>
+            </ion-item>
+
+        </ion-item>
+
+        <ion-item>
+            <a href="http://www.edmunds.com/?id=apis" target="_blank"><img ng-src="img/edmunds-logo.png"  width="100%"/></a>
+        </ion-item>
+        <!--
+        <ion-item ng-click="openSettings()">
+            <div icon-off="ion-ios-gear-outline" icon-on="ion-ios-gear">Settings</div>
+        </ion-item>
+        <ion-item>
+            Help
+        </ion-item>
+        <ion-item>
+            Share App
+        </ion-item>
+        <ion-item ng-click="exitApp()">
+            <div icon-off="ion-ios-close-outline" icon-on="ion-close-circled">Exit</div>
+        </ion-item>
+        -->
+    </ion-list>
+</ion-content>

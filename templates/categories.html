@@ -1,0 +1,22 @@
+<ion-view>
+    <ion-nav-buttons side="right">
+        <ion-toggle class="button button-clear button-icon btn-toggle-view" ng-click="viewChange()" ng-class="viewClass"></ion-toggle>
+    </ion-nav-buttons>
+    <ion-nav-title>
+        {{ PageTitle }}
+    </ion-nav-title>
+    <ion-content ng-class="'categoriesview-' + appView" >
+        <ion-list>
+            <ion-list-item ng-repeat="listItem in vehicleMakeData" class="list-item">
+                <a href="#/tab/categories-model/{{listItem.nice_name}}/{{listItem.name}}" class="button">
+                    <button class="button">
+                        <img ng-src="img/vehicle_logos/{{listItem.nice_name}}.jpg"/>
+                        <div class="details">
+                            {{listItem.name}}
+                        </div>
+                    </button>
+                </a>
+            </ion-list-item>
+        </ion-list>
+    </ion-content>
+</ion-view>
