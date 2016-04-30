@@ -1,0 +1,43 @@
+<ion-view>
+    <ion-nav-title>
+        {{ PageTitle }}
+    </ion-nav-title>
+    <ion-content>
+        <!--
+        <ion-refresher
+                pulling-text="Pull to refresh..."
+                on-refresh="doRefresh()">
+        </ion-refresher>
+        -->
+        <div class="list">
+            <div class="item item-avatar">
+                <img src="img/vehicle_logos/{{modelShowCase.make.niceName}}.jpg">
+                <h2>{{modelShowCase.make.name}} {{modelShowCase.model.name}} - <span>{{modelShowCase.year.year}}</span></h2>
+                <p>{{modelShowCase.name}}</p>
+            </div>
+
+            <div class="item item-body">
+                <a class="item item-list-detail image-showcase">
+                    <ion-scroll direction="x">
+                        <img ng-repeat="image in modelShowcasePhotos"  ng-src="{{image}}" ng-click="" class="image-list-thumb"/>
+                    </ion-scroll>
+                </a>
+                <div class="item item-divider showcase-header">
+                    Highlights
+                </div>
+                <div class="item row showcase">
+                    <div class="col col-90" ng-repeat="(key, value) in modelShowCase.summeryData track by $index">
+                        <span><span>{{key}}:</span>&nbsp; {{value}}</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="item tabs tabs-secondary tabs-icon-left">
+                <a class="tab-item" href="#">
+                    <i class="icon ion-share"></i>
+                    Share
+                </a>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>

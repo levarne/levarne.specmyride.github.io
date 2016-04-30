@@ -1,0 +1,90 @@
+<ion-view>
+    <ion-nav-title>
+        {{ PageTitle }}
+    </ion-nav-title>
+    <ion-content class="description-view">
+
+        <!--default page view-->
+        <div class="card" ng-if="!articleData">
+            <div class="item item-divider">
+                <h3>Please make a Category Selection.</h3>
+            </div>
+        </div>
+
+
+        <div class="card" ng-if="articleData.description">
+           <div class="item item-divider">
+                <h3>Description</h3>
+           </div>
+           <div class="item item-text-wrap" ng-bind-html="articleData.description | sanitize"></div>
+        </div>
+        <div class="card" ng-if="articleData.introduction">
+           <div class="item item-divider">
+                 <h3>Introduction</h3>
+           </div>
+           <div class="item item-text-wrap" ng-bind-html="articleData.introduction | sanitize"></div>
+        </div>
+        <div class="card" ng-if="articleData.edmundsSays">
+           <div class="item item-divider">
+                <h3>EdmundsSays</h3>
+           </div>
+           <div class="item item-text-wrap" ng-bind-html="articleData.edmundsSays | sanitize"></div>
+        </div>
+        <div class="card" ng-if="articleData.pros">
+           <div class="item item-divider">
+                <h3>Pros</h3>
+           </div>
+           <div class="item item-text-wrap">
+                <div ng-repeat="n in articleData.pros" ng-bind-html="'&bull; &nbsp;' + (articleData.pros[$index] | sanitize)"></div>
+           </div>
+        </div>
+        <div class="card" ng-if="articleData.cons">
+           <div class="item item-divider">
+                <h3>cons</h3>
+           </div>
+           <div class="item item-text-wrap">
+                <div ng-repeat="n in articleData.cons" ng-bind-html="'&bull; &nbsp;' + (articleData.cons[$index] | sanitize)"></div>
+           </div>
+        </div>
+        <div class="card" ng-if="articleData.whatsNew">
+           <div class="item item-divider">
+                <h3>whatsNew</h3>
+           </div>
+           <div class="item item-text-wrap" ng-bind-html="articleData.whatsNew | sanitize"></div>
+        </div>
+        <div class="card" ng-if="articleData.body">
+            <div class="item item-divider">
+                <h3>Body</h3>
+            </div>
+           <div class="item item-text-wrap" ng-bind-html="articleData.body | sanitize"></div>
+        </div>
+        <div class="card" ng-if="articleData.powertrain">
+           <div class="item item-divider">
+                <h3>Powertrain</h3>
+           </div>
+           <div class="item item-text-wrap" ng-bind-html="articleData.powertrain | sanitize">
+
+           </div>
+        </div>
+        <div class="card" ng-if="articleData.safety">
+           <div class="item item-divider">
+                <h3>Safety</h3>
+           </div>
+           <div class="item item-text-wrap" ng-bind-html="articleData.safety | sanitize"></div>
+        </div>
+        <div class="card" ng-if="articleData.interior">
+           <div class="item item-divider">
+            <h3>Interior</h3>
+           </div>
+           <div class="item item-text-wrap" ng-bind-html="articleData.interior | sanitize">
+
+           </div>
+        </div>
+        <div class="card" ng-if="articleData.driving">
+           <div class="item item-divider">
+                <h3>Driving</h3>
+           </div>
+           <div class="item item-text-wrap" ng-bind-html="articleData.driving | sanitize"></div>
+        </div>
+    </ion-content>
+</ion-view>

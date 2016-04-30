@@ -1,0 +1,83 @@
+<ion-view>
+    <ion-nav-title>
+        {{ PageTitle }}
+    </ion-nav-title>
+    <ion-content class="description-view">
+
+
+        <!--default page view-->
+        <div class="card" ng-if="!reviewData">
+            <div class="item item-divider">
+                <h3>Please make a Category Selection.</h3>
+            </div>
+        </div>
+
+
+        <div class="card" ng-if="reviewData.metaDescription">
+            <div class="item item-divider">
+                <h3>Description</h3>
+            </div>
+            <div class="item item-text-wrap" ng-bind-html="reviewData.metaDescription | sanitize"></div>
+        </div>
+        <div class="card" ng-if="reviewData.introduction">
+            <div class="item item-divider">
+                <h3>introduction</h3>
+            </div>
+            <div class="item item-text-wrap" ng-bind-html="reviewData.introduction | sanitize"></div>
+        </div>
+        <div class="card" ng-if="reviewData.edmundsSays">
+            <div class="item item-divider">
+                <h3>edmundsSays</h3>
+            </div>
+            <div class="item item-text-wrap" ng-bind-html="reviewData.edmundsSays | sanitize"></div>
+        </div>
+        <div class="card" ng-if="reviewData.pro">
+            <div class="item item-divider">
+                <h3>pros</h3>
+            </div>
+            <div class="item item-text-wrap" ng-bind-html="reviewData.pro | sanitize"></div>
+        </div>
+        <div class="card" ng-if="reviewData.con">
+            <div class="item item-divider">
+                <h3>cons</h3>
+            </div>
+            <div class="item item-text-wrap" ng-bind-html="reviewData.con | sanitize"></div>
+        </div>
+        <div class="card" ng-if="reviewData.whatsNew">
+            <div class="item item-divider">
+                <h3>whatsNew</h3>
+            </div>
+            <div class="item item-text-wrap" ng-bind-html="reviewData.whatsNew | sanitize"></div>
+        </div>
+        <div class="card" ng-if="reviewData.body">
+            <div class="item item-divider">
+                <h3>body</h3>
+            </div>
+            <div class="item item-text-wrap" ng-bind-html="reviewData.body | sanitize"></div>
+        </div>
+        <div class="card" ng-if="reviewData.powertrain">
+            <div class="item item-divider">
+                <h3>powertrain</h3>
+            </div>
+            <div class="item item-text-wrap" ng-bind-html="reviewData.powertrain | sanitize"></div>
+        </div>
+        <div class="card" ng-if="reviewData.safety">
+            <div class="item item-divider">
+                <h3>safety</h3>
+            </div>
+            <div class="item item-text-wrap" ng-bind-html="reviewData.safety | sanitize"></div>
+        </div>
+        <div class="card" ng-if="reviewData.interior">
+            <div class="item item-divider">
+                <h3>interior</h3>
+            </div>
+            <div class="item item-text-wrap" ng-bind-html="reviewData.interior | sanitize"></div>
+        </div>
+        <div class="card" ng-if="reviewData.driving">
+            <div class="item item-divider">
+                <h3>driving</h3>
+            </div>
+            <div class="item item-text-wrap" ng-bind-html="reviewData.driving | sanitize"></div>
+        </div>
+    </ion-content>
+</ion-view>
